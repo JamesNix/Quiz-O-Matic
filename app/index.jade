@@ -1,0 +1,80 @@
+doctype html
+//[if IE 9]><html class="lt-ie10" lang="en" > <![endif]
+html(class='no-js', lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Quiz-O-Matic
+    link(rel='stylesheet', href='/css/normalize.css')
+    link(rel='stylesheet', href='/css/foundation.css')
+    link(rel='stylesheet', href='/css/app.css')
+    script(src='/js/vendor/modernizr.js')
+  body
+    .row
+      .small-4.columns.head#quizHead
+        h1 Quiz-O-Matic
+      .row
+        .small-2.columns#roundBox.head
+          h3#round
+        .row
+          .small-2.columns.head
+            button#quizBtn.btn.tiny Start round
+          .row
+            .small-2.columns.head
+              button#roundBtn.btn.tiny Change round
+            .row
+              .small-2.columns.head
+                button#reset.btn.tiny Reset
+    .row
+      .small-12.columns(style='padding:0px')
+        table.tftable
+          col(style='width:60%')
+          col(style='width:40%')
+          tr
+            th Questions
+            th Answers
+          tr
+            td#q0.a0
+            td
+              .row
+                .small-6.columns
+                  input(type='text').answer0
+                .small-6.columns
+                  button.submit.btn.tiny(data-qnum=0) Submit
+          tr
+            td#q1.a1
+            td
+              .row
+                .small-6.columns
+                  input(type='text').answer1
+                .small-6.columns
+                  button.submit.btn.tiny(data-qnum=1) Submit
+          tr
+            td#q2.a2
+            td
+              .row
+                .small-6.columns
+                  input(type='text').answer2
+                .small-6.columns
+                  button.submit.btn.tiny(data-qnum=2) Submit
+          tr
+            td#q3.a3
+            td
+              .row
+                .small-6.columns
+                  input(type='text').answer3
+                .small-6.columns
+                  button.submit.btn.tiny(data-qnum=3) Submit
+    .row
+      .small-3.columns#score
+      .row
+        .small-3.columns#correct Correct!
+        .row
+          .small-3.column#incorrect Incorrect!
+          .row
+            .small-3.column#spacer
+
+    script(src='/js/vendor/jquery.js')
+    script(src='/js/vendor/foundation.js')
+    script(src='/js/vendor/lodash.js')
+    script(src='/js/source/main.js')
